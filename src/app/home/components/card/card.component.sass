@@ -1,0 +1,47 @@
+@import 'bourbon'
+@import 'sass-flexbox'
+@import 'variables'
+
+.card
+    @include display-flex
+    @include align-items-center
+    @include flex-direction-column
+    @include border-color($purple-medium)
+    @include border-style(solid)
+    @include border-width(.2rem)
+    color: $purple-medium
+    border-radius: .5rem
+    width: 20rem
+    height: 12.5rem
+
+    .header
+        @include border-style(null null solid)
+        @include border-color($purple-medium)
+        @include border-width(.2rem)
+        height: 2rem
+        width: 100%
+        padding: 0 1rem
+
+        .dot
+            background-color: $purple-medium
+            height: .5rem
+            width: .5rem
+            border-radius: 50%
+            display: inline-block
+
+            &:not(:first-child)
+                margin-left: .2rem
+
+        .three-dots-container
+            @include display-flex
+            @include align-items-center
+            @include flex-direction-row
+            height: 100%
+
+    .content
+        @include display-flex
+        @include align-items-center
+        @include justify-content-center
+        @include flex-direction-column
+        height: 100%
+        width: 100%
